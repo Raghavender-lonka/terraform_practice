@@ -8,3 +8,16 @@ resource "aws_instance" "web" {
     purpose = "Training Tf"
   }
 }
+
+resource "aws_ebs_volume" "example" {
+  count = var.ebs_size ? 1 : 0
+  availability_zone = "us-west-2a"
+  size              = var.ebs_size
+
+  tags = {
+    Name = "demo27"
+    Owner = "Raghavender"
+    purpose = "Training"
+
+  }
+}

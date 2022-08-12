@@ -3,9 +3,9 @@
 resource "aws_iam_group_membership" "team" {
   name = "tf-testing-group-membership"
 
-  users = var.username_from_module
+  users = var.username_from_module # users name
 
-  group = aws_iam_group.demo_group.name
+  group = aws_iam_group.demo_group.name # group name
 }
 
 # to create user group
