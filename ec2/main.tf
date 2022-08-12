@@ -10,7 +10,7 @@ resource "aws_instance" "web" {
 }
 
 resource "aws_ebs_volume" "example" {
-  count = var.ebs_size ? 1 : 0
+  count = var.condition ? 1 : 0
   availability_zone = "us-west-2a"
   size              = var.ebs_size
 

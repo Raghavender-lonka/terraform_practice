@@ -5,3 +5,4 @@ variable "username_from_module" {
 variable "group_from_module" {
   type = string
 }
+

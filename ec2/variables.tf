@@ -5,3 +5,7 @@ variable "ami_from_module" {
 variable "ebs_size" {
   type = number
 }
+
+variable "condition" {
+  default = true
+}
