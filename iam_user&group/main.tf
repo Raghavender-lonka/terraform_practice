@@ -3,7 +3,8 @@
 resource "aws_iam_group_membership" "team" {
   name = "tf-testing-group-membership"
 
-  users = var.username_from_module # users name
+  # users = var.username_from_module # users name
+  users = [for i in aws_iam_user.lb : i.name ] # users name
 
   group = aws_iam_group.demo_group.name # group name
 }
