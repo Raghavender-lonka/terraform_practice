@@ -19,6 +19,7 @@
     
     provider "aws" {
       region     = "us-east-2"
+      profile = "testing"
     }
 
     resource "aws_instance" "web" {
