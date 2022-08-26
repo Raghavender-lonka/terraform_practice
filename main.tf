@@ -22,7 +22,7 @@
     }
 
     resource "aws_instance" "web" {
-      ami           = "ami-051dfed8f67f095f5"
+      ami           = "ami-0568773882d492fc8"
       instance_type = "t2.micro"
 
       tags = {
