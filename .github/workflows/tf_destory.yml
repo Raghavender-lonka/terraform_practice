@@ -32,11 +32,7 @@ jobs:
           aws-region: us-east-1
       - name: terraform init 
         id: init
-        run: |
-          cd example
-          terraform init -reconfigure 
+        run: terraform init -reconfigure 
       
       - name: Terraform destroy
-        run: |
-          cd example
-          terraform destroy -auto-approve 
+        run: terraform destroy -auto-approve 
