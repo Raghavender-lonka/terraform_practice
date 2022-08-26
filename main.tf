@@ -16,6 +16,10 @@
         }
       }
     }
+    
+    provider "aws" {
+      region     = "us-east-2"
+    }
 
     resource "aws_instance" "web" {
       ami           = "ami-051dfed8f67f095f5"
